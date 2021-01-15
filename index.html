@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>
-            Estimating \( \pi \) with Monte Carlo method
+            Approximating \( \pi \) with Monte Carlo method
         </h1>
         <div class="Text">
             <p>
@@ -35,11 +35,11 @@
             <canvas id="approximator-canvas" width=180 height=180></canvas>
             <div id="approximator-control" class="Approximator-control">
                 <div id="approximator-buttons" class="Approximator">
-                    <button onclick="start_approximation();">Start</button>
-                    <button onclick="stop_approximation();">Stop</button>
+                    <button id="start-button" onclick="start_approximation();">Start</button>
+                    <button id="stop-button" onclick="stop_approximation();">Stop</button>
                 </div>
-                <p id="approximator-inside"></p>
-                <p id="approximator-total"></p>
+                <p id="approximator-inside">Number of points inside circle: 0</p>
+                <p id="approximator-total">Total number of points: 0</p>
                 <p id="approximator-result"></p>
             </div>
         </div>

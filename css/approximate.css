@@ -6,9 +6,24 @@
     gap: 30px;
 }
 
+.Approximator button {
+    background-color: inherit;
+    color: black;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .Approximator-control {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.Approximator-control p {
+    text-align: center;
 }

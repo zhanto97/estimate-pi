@@ -1,24 +1,22 @@
 var RUNNING = false
+
 function initialize() {
     let canvas = document.getElementById('approximator-canvas');
     enhance_canvas_dpi(canvas);
     setup_canvas(canvas);
-}
 
-function setup_canvas(canvas){
-    let context = canvas.getContext('2d');
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
-    context.beginPath();
-    context.rect(0, 0, canvas.width, canvas.height);
-    context.stroke();
-
-    context.beginPath();
-    context.arc(canvas.width/2, canvas.height/2, canvas.height/2, 0, 2 * Math.PI);
-    context.stroke();
+    document.getElementById("start-button").disabled = false;
+    document.getElementById("start-button").style.color = 'black';
+    document.getElementById("stop-button").disabled = true;
+    document.getElementById("stop-button").style.color = '#CCC9C1';
 }
 
 async function start_approximation(){
+    document.getElementById("start-button").disabled = true;
+    document.getElementById("start-button").style.color = '#CCC9C1';
+    document.getElementById("stop-button").disabled = false;
+    document.getElementById("stop-button").style.color = 'black';
+
     let canvas = document.getElementById('approximator-canvas');
     setup_canvas(canvas);
     let context = canvas.getContext('2d');
@@ -40,6 +38,10 @@ async function start_approximation(){
 }
 
 function stop_approximation() {
+    document.getElementById("start-button").disabled = false;
+    document.getElementById("start-button").style.color = 'black';
+    document.getElementById("stop-button").disabled = true;
+    document.getElementById("stop-button").style.color = '#CCC9C1';
     RUNNING = false;
 }
 

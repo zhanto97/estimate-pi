@@ -6,6 +6,19 @@ function enhance_canvas_dpi(canvas) {
     canvas.setAttribute('width', style_width * dpi);
 }
 
+function setup_canvas(canvas){
+    let context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    context.beginPath();
+    context.rect(0, 0, canvas.width, canvas.height);
+    context.stroke();
+
+    context.beginPath();
+    context.arc(canvas.width/2, canvas.height/2, canvas.height/2, 0, 2 * Math.PI);
+    context.stroke();
+}
+
 function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
