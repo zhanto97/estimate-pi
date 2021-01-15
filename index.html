@@ -33,8 +33,14 @@
         </div>
         <div id="approximator" class="Approximator">
             <canvas id="approximator-canvas" width=180 height=180></canvas>
-            <div id="approximator-result">
-                <button onclick="start_approximation();">Start approximation</button>
+            <div id="approximator-control" class="Approximator-control">
+                <div id="approximator-buttons" class="Approximator">
+                    <button onclick="start_approximation();">Start</button>
+                    <button onclick="stop_approximation();">Stop</button>
+                </div>
+                <p id="approximator-inside"></p>
+                <p id="approximator-total"></p>
+                <p id="approximator-result"></p>
             </div>
         </div>
         <script>
