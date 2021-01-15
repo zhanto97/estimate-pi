@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.Text {
+    margin: auto;
+    width: 50%;
+}
+
+.Text p {
+    font-size: 17px;
+}
